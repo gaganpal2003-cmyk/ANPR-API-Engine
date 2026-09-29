@@ -10,6 +10,20 @@ import cv2
 import numpy as np
 import torch
 
+# PyTorch 2.6+ compatibility: defaults weights_only=True which breaks custom pickled YOLO checkpoints
+try:
+    _orig_torch_load = torch.load
+    def _compat_torch_load(*args, **kwargs):
+        if "weights_only" not in kwargs:
+            try:
+                return _orig_torch_load(*args, weights_only=False, **kwargs)
+            except TypeError:
+                return _orig_torch_load(*args, **kwargs)
+        return _orig_torch_load(*args, **kwargs)
+    torch.load = _compat_torch_load
+except Exception:
+    pass
+
 # Ensure YOLO internal imports resolve
 BASE_DIR = Path(__file__).resolve().parent.parent
 YOLO_DIR = BASE_DIR / "Modules" / "ObjectDetectionModel" / "objectdetection"

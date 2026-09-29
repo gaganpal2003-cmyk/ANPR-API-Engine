@@ -28,6 +28,20 @@ try:
 except ImportError:
     pass
 
+try:
+    import torch
+    _orig_torch_load = torch.load
+    def _compat_torch_load(*args, **kwargs):
+        if "weights_only" not in kwargs:
+            try:
+                return _orig_torch_load(*args, weights_only=False, **kwargs)
+            except TypeError:
+                return _orig_torch_load(*args, **kwargs)
+        return _orig_torch_load(*args, **kwargs)
+    torch.load = _compat_torch_load
+except Exception:
+    pass
+
 import uvicorn
 # Import the FastAPI application
 from api.app import app

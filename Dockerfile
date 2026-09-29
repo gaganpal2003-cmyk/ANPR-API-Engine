@@ -5,6 +5,7 @@ FROM python:3.10-slim
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV PORT=10000
+ENV YOLO_CONFIG_DIR=/tmp/Ultralytics
 
 # Install required system packages for OpenCV and image processing
 RUN apt-get update && apt-get install -y --no-install-recommends \
