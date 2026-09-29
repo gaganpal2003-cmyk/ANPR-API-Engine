@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: anpr-fastapi-service
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: ANPR_API_KEY
+        value: anpr_live_secret_key_2026
+      - key: ANPR_CONF_THRESHOLD
+        value: "0.15"
+      - key: ANPR_OCR_CONF_THRESHOLD
+        value: "0.15"
+      - key: ENVIRONMENT
+        value: production

@@ -1,0 +1,17 @@
+aus_steam_coal
+bauxite
+coking_coal
+coking_coal_aus_hard
+coking_coal_russian_pci
+coking_coal_us_soft
+coking_coal_aus_soft
+coking_coal_pci
+coking_coal_us_hard
+gypsum
+indonesian_coal
+indonesian_coal_grade_4
+limestone
+pet_coke
+steam_coal_aus_grade
+steam_coal_rb2
+steam_coal_rb1

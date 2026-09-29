@@ -1,0 +1,25 @@
+{
+  "keys": [
+    {
+      "key": "anpr_live_secret_key_2026",
+      "client": "Default Admin / Developer",
+      "created_at": "2026-09-28",
+      "is_active": true,
+      "description": "Default primary API key"
+    },
+    {
+      "key": "anpr_client_demo_key_778899",
+      "client": "Demo Client User",
+      "created_at": "2026-09-28",
+      "is_active": true,
+      "description": "Client demo API key for testing"
+    },
+    {
+      "key": "anpr_b68a47b6a32930c269a01306a703d97e",
+      "client": "External Mobile App",
+      "created_at": "2026-09-28 16:35:00",
+      "is_active": true,
+      "description": "Key for security booth mobile scanner"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Model path
+model: .\Detection\model\yolov5s.pt
+
+# All trained objects names file
+train_classes: .\Detection\data\coco.yaml
+
+# Object name
+names:
+  0: person
+
+# Database path
+db_path: C:\Database\CargoIdentify.db
+
+# Threshold 0.30 means above 30%
+threshold: 0.10

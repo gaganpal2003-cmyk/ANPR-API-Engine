@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.idea
+build/
+dist/
+*.spec
+*.pdf
+.git
+.env.local

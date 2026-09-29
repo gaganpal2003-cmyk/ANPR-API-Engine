@@ -1,0 +1,14 @@
+bauxite
+c_coal
+clo_cargo
+petcoke
+gypsum
+i_ore_fines
+i_ore_pillets
+limestone
+metcoke
+paroxnite
+rom_cargo
+steam_coal
+t_coal
+truck
